@@ -48,8 +48,7 @@
 
 - (NSString*)debugDescription
 {
-	CFStringRef description = CFCopyDescription(dictionary);
-	return (__bridge NSString*)description;
+	return (__bridge_transfer NSString*)CFCopyDescription(dictionary);
 }
 
 - (NSEnumerator*)keyEnumerator
