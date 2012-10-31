@@ -1,7 +1,9 @@
 #LXFoundation
-##usage
+##Basic usage
 
-drag any class pair into your xcode project, and complie.
+Drag any class pair into your xcode project, and complie.
+
+###LXMutableDictionary
 
 LXMutableDictionary usage is same as NSMutableDictionary except it will not throw an exception if the value or key is nil object. This will make your code more robust and easy to debug. 
 
