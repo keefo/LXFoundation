@@ -9,6 +9,7 @@ LXMutableDictionary is same as NSMutableDictionary except it will not throw an e
 
 Beware, if some part of your code depends on default NSMutableDictionary exception to work, this should be handled more carefully. 
 
+	//Init LXMutableDictionary
 	LXMutableDictionary *dic=[LXMutableDictionary dictionary];
 	[dic setObject:@"obj1" forKey:@"key1"];
 	[dic setObject:@"obj2" forKey:@"key1"];
@@ -26,13 +27,17 @@ Beware, if some part of your code depends on default NSMutableDictionary excepti
 	[dic setObject:@"obj1" forKey:@"key1"];
 	[dic setObject:@"obj2" forKey:@"key1"];
   	
+	LXMutableDictionary *dic=[[LXMutableDictionary alloc] initWithCapacity:10];
+	[dic setObject:@"obj1" forKey:@"key1"];
+	[dic setObject:@"obj2" forKey:@"key1"];
+
+	//Save and read LXMutableDictionary
   	NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.plist"];
+  	
   	[dic writeToFile:path atomically:NO];
-    
 	dic=[LXMutableDictionary dictionaryWithContentsOfFile:path];
 	
 	[NSKeyedArchiver archiveRootObject:dic toFile:path]
-	
 	dic=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
       
       
