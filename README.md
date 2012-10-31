@@ -3,7 +3,7 @@
 
 drag any class pair into your xcode project, and complie.
 
-LXMutableDictionary usage is same as NSMutableDictionary except it will not throw an exception if the value or key is nil object.
+LXMutableDictionary usage is same as NSMutableDictionary except it will not throw an exception if the value or key is nil object. This will make your code more robust and easy to debug.
 
 	LXMutableDictionary *dic=[LXMutableDictionary dictionary];
 	[dic setObject:@"obj1" forKey:@"key1"];
