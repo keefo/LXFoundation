@@ -30,5 +30,9 @@ Beware, if some part of your code depends on default NSMutableDictionary excepti
   	[dic writeToFile:path atomically:NO];
     
 	dic=[LXMutableDictionary dictionaryWithContentsOfFile:path];
+	
+	[NSKeyedArchiver archiveRootObject:dic toFile:path]
+	
+	dic=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
       
       
