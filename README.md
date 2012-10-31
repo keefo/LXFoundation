@@ -22,8 +22,9 @@ LXMutableDictionary usage is same as NSMutableDictionary except it will not thro
 	[dic setObject:@"obj1" forKey:@"key1"];
 	[dic setObject:@"obj2" forKey:@"key1"];
   	
-  	[dic writeToFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.plist"] atomically:NO];
+  	NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.plist"];
+  	[dic writeToFile:path atomically:NO];
     
-	dic=[LXMutableDictionary dictionaryWithContentsOfFile:[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.plist"]];
+	dic=[LXMutableDictionary dictionaryWithContentsOfFile:path];
       
       
