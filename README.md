@@ -9,6 +9,7 @@ LXMutableDictionary is same as NSMutableDictionary except it will not throw an e
 
 Beware, if some part of your code depends on default NSMutableDictionary exception to work, this should be handled more carefully. 
 
+```objective-c
 	//Init LXMutableDictionary
 	LXMutableDictionary *dic=[LXMutableDictionary dictionary];
 	[dic setObject:@"obj1" forKey:@"key1"];
@@ -39,5 +40,5 @@ Beware, if some part of your code depends on default NSMutableDictionary excepti
 	
 	[NSKeyedArchiver archiveRootObject:dic toFile:path]
 	dic=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
-      
-      
+```
+   
