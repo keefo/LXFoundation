@@ -38,6 +38,7 @@ NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testD
 [dic writeToFile:path atomically:NO];
 dic=[LXMutableDictionary dictionaryWithContentsOfFile:path];
 
+NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.dat"];
 [NSKeyedArchiver archiveRootObject:dic toFile:path]
 dic=[NSKeyedUnarchiver unarchiveObjectWithFile:path];
 ```
