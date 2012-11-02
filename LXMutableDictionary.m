@@ -110,6 +110,11 @@
 	[encoder encodeObject:(__bridge NSDictionary*)dictionary forKey:@"dictionary"];
 }
 
+- (void)encodeObject:(id)objv forKey:(NSString *)key
+{
+    NSLog(@"encodeObject=%@ forKey=%@", objv, key);
+}
+
 #pragma mark NSCopying
 
 - (id)copyWithZone:(NSZone*) zone {
