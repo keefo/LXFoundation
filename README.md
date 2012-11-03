@@ -1,6 +1,6 @@
 #LXFoundation
 
-LXFoundation is a set of basic container classes mean to replace Cocoa NS prefix containers such as NSMutableArray, NSMutableDictionary. It will handle invalid value silently rather than throw an exception to make your app crash.
+LXFoundation is a set of basic container classes mean to replace Cocoa NS prefix containers such as NSMutableArray, NSMutableDictionary. It will handle invalid value silently rather than throw an exception to crash your app.
 
 ##About performance
 
