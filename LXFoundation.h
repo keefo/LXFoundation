@@ -10,5 +10,6 @@
 #define Miao_LXFoundation_h
 
 #import "LXMutableDictionary.h"
+#import "LXMutableArray.h"
 
 #endif

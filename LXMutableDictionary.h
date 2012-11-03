@@ -8,6 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+#ifdef NSMutableDictionary
+#undef NSMutableDictionary
+#endif
+
 @interface LXMutableDictionary : NSMutableDictionary{
 	CFMutableDictionaryRef dictionary;
 }

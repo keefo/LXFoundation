@@ -8,6 +8,15 @@
 
 #import "LXMutableDictionary.h"
 
+#ifdef NSMutableDictionary
+#undef NSMutableDictionary
+#endif
+
+#if  !__has_feature(objc_arc)
+#define __bridge
+#define __bridge_transfer
+#endif
+
 @implementation LXMutableDictionary
 
 - (id) init {
