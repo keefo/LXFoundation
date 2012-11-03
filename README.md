@@ -40,7 +40,17 @@ LXMutableDictionary *dic=[[LXMutableDictionary alloc] initWithCapacity:10];
 				@"obj12", @"key12",
 				nil]
 		forKey:@"key1"];
-		
+
+//Fast Enumerator
+for(id key in dic){
+	NSLog(@"dic[%@]=%@", key, [dic objectForKey:key]);
+}
+NSEnumerator *keyEnumerator=[dic keyEnumerator];
+id key;
+while ( key =[keyEnumerator nextObject] ) {
+	NSLog(@"dic[%@]=%@", key, [dic objectForKey:key]);
+}
+
 //Save and read LXMutableDictionary
 NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/testDic.plist"];
 [dic writeToFile:path atomically:NO];
@@ -72,7 +82,12 @@ LXMutableArray *array=[[LXMutableArray alloc] initWithCapacity:10];
 				  @"obj12", @"key12",
 				  nil]];
 				  
-		
+
+//Fast Enumerator
+for(id obj in array){
+	NSLog(@"obj=%@", obj);
+}
+
 //Save and read LXMutableArray
 NSString *path=[NSHomeDirectory() stringByAppendingPathComponent:@"Desktop/array.plist"];
 [array writeToFile:path atomically:NO];
