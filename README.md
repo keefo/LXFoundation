@@ -8,7 +8,7 @@ LXFoundation builds on top of Core Foundation Classes, their performance are alm
 
 ##Basic usage
 
-Drag LXFoundation into your xcode project, and compile. If you don't want to change your exist project code. Then you can simply do this. Add following lines to your project prefix.pch:
+Drag LXFoundation into your xcode project, and compile. If you don't want to change your existing project code. Then you can simply add following lines to your project prefix.pch:
 
 ```objective-c
 #import "LXFoundation.h"
