@@ -32,8 +32,10 @@
 }
 
 - (void) dealloc {
-	CFRelease(dictionary);
-    dictionary = NULL;
+    if (dictionary) {
+        CFRelease(dictionary);
+        dictionary = NULL;
+    }
 #if  !__has_feature(objc_arc)
 	[super dealloc];
 #endif
